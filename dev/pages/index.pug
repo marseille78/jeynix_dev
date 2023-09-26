@@ -5,11 +5,12 @@ include ../layout/section/section
 
 block content
   +sidebar()
-  +b.MAIN.slider.page__main(data-swiper)
-    +e.DIV.wrapper(data-swiper-wrapper)
-      +section(dataSectWelcome)
-      +section(dataSectReplaceHead)
-      +section(dataSectYounger)
-      +section(dataSectReplaceFace)
-    +e.DIV.pagination
-    +e.DIV.scroll
+  +e.MAIN.main
+    +b.DIV.slider(data-swiper)
+      +e.DIV.wrapper(data-swiper-wrapper)
+        +section(dataSectWelcome)
+        +section(dataSectReplaceHead)
+        +section(dataSectYounger)
+        +section(dataSectReplaceFace)
+      +e.DIV.pagination
+      +e.DIV.scroll
