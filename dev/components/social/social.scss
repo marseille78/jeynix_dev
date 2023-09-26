@@ -1,0 +1,32 @@
+/* .social */
+//@media (min-width: $xs) { /* .social $xs */ }
+//@media (min-width: $sm) { /* .social $sm */ }
+//@media (min-width: $md) { /* .social $md */ }
+//@media (min-width: $lg) { /* .social $lg */ }
+//@media (min-width: $xl) { /* .social $xl */ }
+//@media (min-width: $xxl) { /* .social $xxl */ }
+
+.social {
+  list-style-type: none;
+  margin: 0 0 20px;
+  padding: 0;
+
+  &__item {
+    display: block;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+    
+    &--youtube {
+      font-size: 16px;
+    }
+  }
+}

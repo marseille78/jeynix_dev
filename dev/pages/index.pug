@@ -1,0 +1,13 @@
+extends ../templates/tpl-base
+
+include ../layout/sidebar/sidebar
+include ../layout/section/section
+
+block content
+  +sidebar()
+  +b.MAIN.slider.page__main(data-swiper)
+    +e.DIV.wrapper(data-swiper-wrapper)
+      +section(dataSectWelcome)
+      +section(dataSectReplaceHead)
+      +section(dataSectYounger)
+      +section(dataSectReplaceFace)

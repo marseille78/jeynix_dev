@@ -1,0 +1,29 @@
+/* .section */
+//@media (min-width: $xs) { /* .section $xs */ }
+//@media (min-width: $sm) { /* .section $sm */ }
+//@media (min-width: $md) { /* .section $md */ }
+//@media (min-width: $lg) { /* .section $lg */ }
+//@media (min-width: $xl) { /* .section $xl */ }
+//@media (min-width: $xxl) { /* .section $xxl */ }
+
+.section {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 100%;
+  position: relative;
+
+  &--welcome {
+    background-color: rgba(255, 0, 0, .1);
+  }
+  &--replace-head {
+    background-color: rgba(0, 255, 0, .1);
+  }
+  &--younger {
+    background-color: rgba(0, 0, 255, .1);
+  }
+  &--replace-face {
+    background-color: rgba(255, 255, 0, .1);
+  }
+}

@@ -1,0 +1,35 @@
+mixin section(data)
+  -
+    const {title_ua, title_en, cls} = data;
+
+  // START .section
+  +b.SECTION.section(class= cls)
+    +e.DIV.content
+      +e.H2.title
+        span(data-lang="ua") #{title_ua}
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 1
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 2
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 3
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 4
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 5
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 6
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 7
+        span(data-lang="en") #{title_en}
+      +e.H2.title
+        span(data-lang="ua") Ласкаво просимо 8
+        span(data-lang="en") #{title_en}
+  // END .section

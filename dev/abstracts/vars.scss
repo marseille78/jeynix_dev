@@ -1,0 +1,48 @@
+// COLORS
+$c_bgBody: #0d1011;
+$c_text: #fff;
+$c_brand: #e2ff00;
+
+// Font-family
+$ff_base: "Montserrat", sans-serif;
+$ff_second: "Play", sans-serif;
+
+// Brakepoints
+$xs: "480px";
+$sm: "576px";
+$_sm: "575px";
+$md: "768px";
+$_md: "767px";
+$lg: "992px";
+$_lg: "991px";
+$xl: "1200px";
+$_xl: "1199px";
+$xxl: "1400px";
+
+$anim: (ease-in-out 300ms);
+$gape: 8px;
+
+// Bootstrap
+// Кількість колонок
+// $grid-columns: 12;
+
+// Ширина відступів між колонками
+// $grid-gutter-width: 1.5rem;
+$grid-gutter-width: 16px;
+
+// Контрольні точки
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px // xxl: 1400px,,,,,,
+);
+
+// Максимальні ширини
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px // xxl: 1320px,,,,,,
+);

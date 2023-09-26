@@ -1,0 +1,17 @@
+include ../../components/social/social
+
+mixin sidebar(data)
+  // START .sidebar
+  +b.DIV.sidebar
+    +e.DIV.top
+      +e.A.logo(href="/")
+        img(src="./img/logo.svg" alt="logo")
+      +e.DIV.lang
+        +e.BUTTON.lang-item(type="button" data-toggle-lang="en") en
+        +e.BUTTON.lang-item(type="button" data-toggle-lang="ua") ua
+
+    +e.DIV.bottom
+      +social()
+      +e.BUTTON.toggle-theme
+        img(src="./img/nightMode.svg" alt="button toggle theme")
+  // END .sidebar
