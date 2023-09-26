@@ -104,6 +104,24 @@ document.addEventListener('DOMContentLoaded', function() {
       // при зміні дочерніх
       // елементів слайда
       observeSlideChildren: true,
+
+      // Навігація
+      // Булети, поточне положення, прогресбар
+      pagination: {
+        el: ".slider__pagination",
+        type: "bullets",
+        clickable: true,
+        bulletClass: "slider__bullet",
+        "bulletActiveClass": "slider__bullet--active"
+      },
+
+      // Скрол
+      scrollbar: {
+        el: ".slider__scroll",
+        dragClass: "slider__drag-scroll",
+        // Можливість перетягувати скролл
+        draggable: true,
+      },
     });
   })();
 });
