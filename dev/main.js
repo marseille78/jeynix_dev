@@ -136,8 +136,14 @@ document.addEventListener('DOMContentLoaded', function() {
           mainContainer.classList.add("loaded");
         },
 
+        slideChangeTransitionEnd: function() {
+          document.body.classList.remove("scroll");
+        },
+
         // Подія зміни слайда
-        slideChange: function() {},
+        slideChange: function() {
+          document.body.classList.add("scroll");
+        },
 
         // Зміна розміру вікна браузера
         resize: function() {
@@ -168,6 +174,42 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    const btnScrollDown = document.querySelector("[data-scroll-down]");
+
+    btnScrollDown.addEventListener("click", () => {
+      pageSlider.slideTo(4);
+    });
+
     pageSlider.init();
+  })();
+
+  /*********************************
+  * Welcome slider
+  *********************************/
+  (function() {
+    new Swiper("[data-welcome-swiper]", {
+      // Кількість слайдів для показу
+      slidesPerView: 1,
+
+      // Швидкість
+      speed: 800,
+
+      loop: true,
+
+      // Навігація
+      // Булети, поточне положення, прогресбар
+      pagination: {
+        el: ".swiper__pagination",
+        type: "bullets",
+        clickable: true,
+        bulletClass: "swiper__bullet",
+        "bulletActiveClass": "swiper__bullet--active"
+      },
+
+      navigation: {
+        prevEl: '.swiper__button-prev',
+        nextEl: '.swiper__button-next',
+      },
+    });
   })();
 });

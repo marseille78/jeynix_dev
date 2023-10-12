@@ -2,15 +2,22 @@ extends ../templates/tpl-base
 
 include ../layout/sidebar/sidebar
 include ../layout/section/section
+include ../layout/section/section-slider
+include ../layout/section/section-about
 
 block content
   +sidebar()
   +e.MAIN.main
+    +e.DIV.top-slogan
+      span Jeynix
+      |
+      | Made in Ukraine
     +b.DIV.slider(data-swiper)
       +e.DIV.wrapper(data-swiper-wrapper)
-        +section(dataSectWelcome)
-        +section(dataSectReplaceHead)
-        +section(dataSectYounger)
-        +section(dataSectReplaceFace)
+        +section-slider(dataSectWelcome)
+        +section(dataSectFaceRejuvenation)
+        +section(dataSectHeadReplacement)
+        +section(dataSectFaceReplacement)
+        +section-about(dataSectAboutUs)
       +e.DIV.pagination
       +e.DIV.scroll

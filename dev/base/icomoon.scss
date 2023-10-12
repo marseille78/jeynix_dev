@@ -25,15 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook:before {
+.icon-envelop:before {
   content: "\e900";
 }
-.icon-linkedin:before {
+.icon-facebook:before {
   content: "\e901";
 }
-.icon-tiktok:before {
+.icon-linkedin:before {
   content: "\e902";
 }
-.icon-youtube:before {
+.icon-slider-arrow:before {
   content: "\e903";
+}
+.icon-tiktok:before {
+  content: "\e904";
+}
+.icon-youtube:before {
+  content: "\e905";
 }

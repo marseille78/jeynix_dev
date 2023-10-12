@@ -1,0 +1,27 @@
+mixin swiper(data)
+  // START .swiper
+  +b.DIV.swiper(data-welcome-swiper)
+    div.swiper-wrapper
+      div.swiper-slide
+        +e.DIV.title 
+          span(data-lang="ua") Омолодження
+          span(data-lang="en") Face rejuvenation
+        img(src="img/slide-1.png", alt="Face rejuvenation")
+      div.swiper-slide
+        +e.DIV.title
+          span(data-lang="ua") Заміна обличчя
+          span(data-lang="en") Face replacement
+        img(src="img/slide-2.png", alt="Face replacement")
+      div.swiper-slide
+        +e.DIV.title
+          span(data-lang="ua") Заміна голови
+          span(data-lang="en") Head replacement
+        img(src="img/slide-3.png", alt="Head replacement")
+
+    +e.DIV.ctrl
+      div.swiper__button-prev
+        i.icon-slider-arrow
+      div.swiper__pagination
+      div.swiper__button-next
+        i.icon-slider-arrow
+  // END .swiper

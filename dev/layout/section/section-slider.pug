@@ -1,0 +1,14 @@
+include ../../components/swiper/swiper
+
+mixin section-slider(data)
+  -
+    const {title_ua, title_en, cls} = data;
+
+  // START .section
+  +b.SECTION.section(class= cls)
+    +e.H2.title
+      span(data-lang="ua") #{title_ua}
+      span(data-lang="en") #{title_en}
+    +e.DIV.content
+      +swiper({})
+  // END .section

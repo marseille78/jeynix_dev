@@ -51,6 +51,7 @@
     opacity: .5;
     line-height: 1.6;
     font-weight: 700;
+    outline: none;
     
     @media (min-width: $md) {
       width: 65px;
@@ -68,6 +69,7 @@
     border-top: 1px solid #cbe500;
     width: 50px;
     padding: 12px 0 4px;
+    cursor: pointer;
     
     @media (min-width: $md) {
       width: 65px;

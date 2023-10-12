@@ -3,7 +3,7 @@ const libList = [
   'node_modules/normalize.css/normalize.css',
 
   /* Swiper - слайдер */
-  // 'node_modules/swiper/swiper-bundle.css',
+  'node_modules/swiper/swiper-bundle.css',
 
   /* AOS - анімація */
   // 'node_modules/aos/dist/aos.css',

@@ -13,7 +13,7 @@
 body {
   background-color: #0d1011;
   font-family: $ff_base;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: $c_brand;
 }
@@ -61,18 +61,6 @@ table {
 
 .page {
 
-  &__main-title {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-  }
   &__main {
     padding-left: 50px;
 
@@ -86,6 +74,75 @@ table {
 
     &.loaded {
       opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 65px;
+      bottom: 16px;
+      background: url(../img/bottom-lignt.png) no-repeat 100% 50%;
+      width: 185px;
+      height: 368px;
+      pointer-events: none;
+      z-index: 10;
+
+      @media (max-width: 767px) {
+        left: 50px;
+      }
+    }
+  }
+  &__main-title {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  &__top-slogan {
+    position: fixed;
+    top: 0;
+    left: 65px;
+    z-index: 100;
+    width: 516px;
+    height: 361px;
+    pointer-events: none;
+    background: url(../img/bg-top-slogan.png) no-repeat 0 0;
+    background-size: contain;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: $ff_base;
+    padding: 20px;
+    transition: opacity $anim;
+
+    body.scroll & {
+      opacity: 0;
+    }
+    
+    @media (max-width: 767px) {
+      left: 50px;
+      font-size: 0;
+    }
+
+    span {
+      display: block;
+      color: #FFF;
+      font-family: $ff_second;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: capitalize;
+
+      @media (max-width: 767px) {
+        font-size: 0;
+      }
     }
   }
 }
@@ -119,11 +176,16 @@ table {
     display: flex;
     flex-direction: column;
     transition: transform 600ms ease 800ms, opacity 200ms ease 800ms;
+    z-index: 10;
     
     .page__main.loaded & {
-      transform: translate(0, -50%);
+      transform: translate(-20px, -50%);
       opacity: 1;
       visibility: visible;
+      
+      @media (max-width: 520px) {
+        transform: translate(-5px, -50%);
+      }
     }
     .page__main.free & {
       transition: all 300ms ease 400ms;
@@ -140,6 +202,11 @@ table {
     border-radius: 50%;
     transition: background-color 300ms ease 0s;
     outline: none;
+
+    @media (max-width: 767px) {
+      width: 8px;
+      height: 8px;
+    }
 
     &--active {
       background-color: $c_brand;

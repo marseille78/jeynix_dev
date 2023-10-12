@@ -4,9 +4,10 @@ module.exports = {
     data: {
       dataHead: require('../data/dataHead.json'),
       dataSectWelcome: require("../data/dataSectWelcome.json"),
-      dataSectReplaceHead: require("../data/dataSectReplaceHead.json"),
-      dataSectYounger: require("../data/dataSectYounger.json"),
-      dataSectReplaceFace: require("../data/dataSectReplaceFace.json"),
+      dataSectFaceRejuvenation: require("../data/dataSectFaceRejuvenation.json"),
+      dataSectHeadReplacement: require("../data/dataSectHeadReplacement.json"),
+      dataSectFaceReplacement: require("../data/dataSectFaceReplacement.json"),
+      dataSectAboutUs: require("../data/dataSectAboutUs.json"),
     },
   },
 

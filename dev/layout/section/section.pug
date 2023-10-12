@@ -1,35 +1,25 @@
 mixin section(data)
   -
-    const {title_ua, title_en, cls} = data;
+    const {title_ua, title_en, text_ua, text_en, video_url, cls} = data;
 
   // START .section
   +b.SECTION.section(class= cls)
+    +e.H2.title
+      span(data-lang="ua") #{title_ua}
+      span(data-lang="en") #{title_en}
     +e.DIV.content
-      +e.H2.title
-        span(data-lang="ua") #{title_ua}
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 1
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 2
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 3
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 4
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 5
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 6
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 7
-        span(data-lang="en") #{title_en}
-      +e.H2.title
-        span(data-lang="ua") Ласкаво просимо 8
-        span(data-lang="en") #{title_en}
+      +e.DIV.body
+        +e.DIV.text(data-lang="ua")!= text_ua
+        +e.DIV.text(data-lang="en")!= text_en
+        +e.DIV.video
+          +e.DIV.video-item
+            iframe(
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/f44oomWNTY4/?controls=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            )
   // END .section
