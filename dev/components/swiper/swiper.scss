@@ -32,6 +32,11 @@
       bottom: 66%;
     }
 
+    @media (max-width: 1200px) {
+      font-size: 32px;
+      margin-bottom: -24px;
+    }
+
     @media (max-width: 991px) {
       position: static;
       max-width: none;
@@ -68,7 +73,6 @@
       }
     }
   }
-
   &__ctrl {
     position: absolute;
     bottom: 0;

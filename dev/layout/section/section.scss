@@ -7,12 +7,17 @@
 //@media (min-width: $xxl) { /* .section $xxl */ }
 
 .section {
-  padding: 0 16px;
+  // padding: 0 16px;
+  padding: 90px 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1 0 100%;
   position: relative;
+
+  @media (max-width: 767px) {
+    padding: 120px 40px 0;
+  }
 
   &--face-rejuvenation,
   &--head-replacement,
@@ -47,6 +52,7 @@
 
   &--about-us {
     position: relative;
+    flex-direction: column;
 
     &::after {
       content: "";
@@ -77,6 +83,7 @@
     text-align: right;
     pointer-events: none;
     max-width: 70%;
+    z-index: 1;
 
     @media (max-width: 1400px) {
       font-size: 110px;
@@ -104,6 +111,12 @@
     justify-content: center;
     align-items: center;
 
+    .section--about-us & {
+      position: relative;
+      z-index: 1;
+      margin-bottom: auto;
+    }
+
     .section--welcome & {
       position: absolute;
       top: 0;
@@ -114,11 +127,136 @@
 
     .section--about-us & {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
       width: 100%;
       max-width: 800px;
-      margin: 0 auto;
+      margin: auto auto 90px;
       color: #BDC2C7;
+      
+      @media (max-width: 1400px) {
+        margin: 90px auto auto;
+      }
+    }
+  }
+
+  &__about-text {
+    margin-bottom: 50px;
+
+    @media (max-width: 1400px) {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin: 32px 0;
+
+      @media (max-width: 1400px) {
+        margin: 0 0 16px;
+      }
+    }
+  }
+
+  &__about-email {
+    text-align: center;
+    color: #FFF;
+    font-size: 48px;
+    text-transform: lowercase;
+
+    @media (max-width: 767px) {
+      font-size: inherit;
+    }
+  }
+
+  &__about-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 22px;
+    color: #FFF;
+
+    @media (max-width: 991px) {
+      justify-content: center;
+    }
+    
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.4;
+        filter: blur(25px);
+        z-index: -1;
+
+
+      }
+    }
+
+    a:not(:last-child) {
+      margin-right: 62px;
+
+      @media (max-width: 767px) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__about-footer-left {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    min-width: 294px;
+    min-height: 170px;
+    background: url(../img/bg-bottom-left.png) no-repeat 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    left: -60px;
+    padding-left: 32px;
+    bottom: -22px;
+    padding-bottom: 22px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      font-family: $ff_second;
+      color: #FFF;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+
+  &__about-footer-center {
+    display: flex;
+  }
+
+  &__about-footer-right {
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-right: 32px;
+    position: relative;
+    right: -60px;
+
+    @media (max-width: 991px) {
+      display: none;
     }
   }
 
@@ -132,6 +270,12 @@
     align-items: center;
     color: #FFF;
 
+    @media (max-width: 991px) {
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+
     .section--head-replacement & {
       flex-direction: row-reverse;
     }
@@ -139,16 +283,31 @@
 
   &__text {
     width: calc((100% - 16px * 11) / 12 * 5);
+
+    @media (max-width: 1200px) {
+      width: calc((100% - 16px * 11) / 2);
+    }
+
+    @media (max-width: 991px) {
+      width: auto;
+      margin-bottom: 24px;
+    }
   }
   
   &__video {
     width: calc((100% - 16px * 11) / 12 * 7);
     display: flex;
     justify-content: center;
+    max-width: 100%;
+
+    @media (max-width: 991px) {
+      width: auto;
+    }
   }
 
   &__video-item {
     position: relative;
+    max-width: 100%;
 
     &::before,
     &::after {
@@ -174,6 +333,7 @@
     iframe {
       position: relative;
       z-index: 3;
+      max-width: 100%;
     }
   }
 }

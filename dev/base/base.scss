@@ -16,6 +16,14 @@ body {
   font-size: 18px;
   line-height: 1.5;
   color: $c_brand;
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -182,6 +190,10 @@ table {
       transform: translate(-20px, -50%);
       opacity: 1;
       visibility: visible;
+      
+      @media (max-width: 767px) {
+        transform: translate(-10px, -50%);
+      }
       
       @media (max-width: 520px) {
         transform: translate(-5px, -50%);
