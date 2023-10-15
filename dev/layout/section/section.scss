@@ -14,9 +14,14 @@
   align-items: center;
   flex: 1 0 100%;
   position: relative;
+  // overflow: hidden;
 
   @media (max-width: 767px) {
     padding: 120px 40px 0;
+  }
+
+  @media (max-width: 520px) {
+    padding: 60px 40px 0;
   }
 
   &--face-rejuvenation,
@@ -29,6 +34,18 @@
 
   &--face-rejuvenation {
     background-image: url(../img/bg-1.png);
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      background: linear-gradient(to bottom, rgba(8,8,9,1) 0%, rgba(8,8,9,0) 100%);
+      pointer-events: none;
+    }
   }
   
   &--head-replacement {
@@ -82,7 +99,7 @@
     width: 100%;
     text-align: right;
     pointer-events: none;
-    max-width: 70%;
+    max-width: 90%;
     z-index: 1;
 
     @media (max-width: 1400px) {
@@ -110,6 +127,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    // .section:not(.section--welcome) & {
+    //   height: calc(100% - 76px);
+    //   background-color: red;
+    //   overflow-y: auto;
+    // }
 
     .section--about-us & {
       position: relative;
@@ -185,6 +208,11 @@
       align-items: center;
       width: 60px;
       height: 60px;
+      transition: color $anim;
+
+      &:hover {
+        color: #e2ff00;
+      }
       
       &::after {
         content: "";
@@ -278,6 +306,12 @@
 
     .section--head-replacement & {
       flex-direction: row-reverse;
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+      }
     }
   }
 
@@ -321,6 +355,10 @@
       bottom: 0;
       opacity: 0.2;
       background: linear-gradient(179deg, #E0EFEF 40.13%, rgba(224, 239, 239, 0.00) 99.03%);
+
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
     &::before {
       transform: rotate(-9.496deg);

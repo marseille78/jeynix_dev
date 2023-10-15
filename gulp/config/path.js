@@ -23,8 +23,8 @@ module.exports = {
   },
 
   img: {
-    src: pathDev + '/img/*.{png,jpg,jpeg,gif,svg}',
-    watch: pathDev + '/img/*.{png,jpg,jpeg,gif,svg}',
+    src: pathDev + '/img/*.{png,jpg,jpeg,gif,svg,ico}',
+    watch: pathDev + '/img/*.{png,jpg,jpeg,gif,svg,ico}',
     dest: pathApp + '/img',
   },
 

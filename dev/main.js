@@ -1,13 +1,6 @@
-// const App = {
-//   productModal: null,
-//   testModal: null,
-// };
+document.body.classList.add("loading");
 
 document.addEventListener('DOMContentLoaded', function() {
-
-  // AOS.init({
-  //   delay: 300
-  // });
 
   /**
    * Resize Browser Window
@@ -19,16 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.remove('opened')
       });
   });
-
-  /*******************************
-   * Example
-   ******************************/
-  // (function() {
-  //   const example = document.querySelector('.example');
-  //
-  //   if (!example) return;
-  //   new Example(opt);
-  // })();
 
   /***********************************
   * Language
@@ -132,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
       on: {
         // Подія ініціалізації
         init: function() {
+          document.body.classList.remove("loading");
           setScrollType();
           mainContainer.classList.add("loaded");
         },
@@ -190,6 +174,10 @@ document.addEventListener('DOMContentLoaded', function() {
     new Swiper("[data-welcome-swiper]", {
       // Кількість слайдів для показу
       slidesPerView: 1,
+
+      autoplay: {
+        delay: 5000,
+      },
 
       // Швидкість
       speed: 800,

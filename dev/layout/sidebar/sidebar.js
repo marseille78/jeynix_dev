@@ -13,7 +13,7 @@ function Language(btns) {
 Language.prototype.toggle = function(e) {
   e.preventDefault();
 
-  (this.dataset.toggleLang === "ua")
-    ? document.body.classList.remove("en")
-    : document.body.classList.add("en");
+  (this.dataset.toggleLang === "en")
+    ? document.body.classList.remove("ua")
+    : document.body.classList.add("ua");
 };
