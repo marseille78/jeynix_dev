@@ -1,6 +1,6 @@
 mixin section(data)
   -
-    const {title_ua, title_en, text_ua, text_en, video_url, cls} = data;
+    const {title_ua, title_en, text_ua, text_en, video, cls} = data;
 
   // START .section
   +b.SECTION.section(class= cls)
@@ -16,7 +16,7 @@ mixin section(data)
             iframe(
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/f44oomWNTY4/?controls=1"
+              src= `https://www.youtube.com/embed/${video}/?controls=1`
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
