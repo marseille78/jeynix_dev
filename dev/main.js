@@ -159,9 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const btnScrollDown = document.querySelector("[data-scroll-down]");
+    const btnScrollUp = document.querySelector("[data-scroll-up]");
 
-    btnScrollDown.addEventListener("click", () => {
+    btnScrollDown.addEventListener("click", (e) => {
+      e.preventDefault();
       pageSlider.slideTo(4);
+    });
+    
+    btnScrollUp.addEventListener("click", (e) => {
+      e.preventDefault();
+      pageSlider.slideTo(0);
     });
 
     pageSlider.init();

@@ -4,7 +4,7 @@ mixin sidebar(data)
   // START .sidebar
   +b.DIV.sidebar
     +e.DIV.top
-      +e.A.logo(href="/")
+      +e.A.logo(href="/" data-scroll-up)
         img(src="./img/logo.svg" alt="logo")
       +e.DIV.lang
         +e.BUTTON.lang-item(type="button" data-toggle-lang="en") en
